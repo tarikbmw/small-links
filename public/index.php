@@ -34,6 +34,7 @@ try
     if (!$in)
         throw new \Exception('Empty request body');
 
+
     /**
      * Convert request body from json to array
      */
@@ -43,6 +44,7 @@ try
 
     if (!isset($request->action) || !$request->action)
         throw new \Exception('No action passed');
+
 
     /**
      * Searching for action
@@ -87,6 +89,6 @@ try
 }
 catch(\Exception $error)
 {
-    header('500 Internal Server Error');
+    header('HTTP/1 500 Internal Server Error');
     echo new Response(['message'   => $error->getMessage()], 'error');
 }
