@@ -2,9 +2,9 @@
 - Нужен PHP 7.4
 - Нужен MySql(MariaDB) сервер 
 
-Необходимо выполнить links.sql
+Необходимо выполнить mysql/links.sql
 
-В index.php находится константа settings
+В src/Settings.php находится константа settings
 необходимо заполнить поля
 - siteUrl - на основе этого параметра будет генерироваться ссылка
 - секцию database необходимо заполнить
@@ -28,7 +28,7 @@
     {
       "links": [
         {
-          "url": "https://www.profi.ru",
+          "url": "https://www.habr.com",
           "visited": 1
         }
       ],
